@@ -1,0 +1,117 @@
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    height: 50px;
+    
+    padding-bottom: 50px; /* Espacio de relleno abajo del texto */
+}
+
+main {
+    padding: 20px;
+}
+
+.post {
+    margin-bottom: 20px;
+    border: 1px solid #000000;
+    background-color: #000000;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid hsl(0, 0%, 0%);
+}
+
+.post-header img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.post-image img {
+    width: 100%;
+    display: block;
+}
+
+footer {
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 10%;
+}
+
+.post-image {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 10px;
+}
+
+.post-image img {
+    width: 100%;
+    height: auto;
+}
+
+/* Media query */
+@media (max-width: 768px) {
+    header {
+        font-size: 1.5em;
+    }
+
+    .post-header img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .post-comments {
+        font-size: 0.8em;
+    }
+}
+
+#whatsapp-chat {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    transition: transform 0.3s ease;
+    z-index: 999; /* Asegura que la imagen esté por encima de otros elementos */
+}
+
+#whatsapp-icon {
+    width: 80px; /* Tamaño inicial de la imagen */
+    height: 80px;
+}
+
+#whatsapp-chat:hover {
+    transform: scale(2) !important; /* Aumenta el tamaño al 200% al pasar el cursor sobre el contenedor */
+}
+
+#telegram-chat {
+    position: fixed;
+    bottom: 130px;
+    right: 10px;
+    transition: transform 0.3s ease;
+    z-index: 999; /* Asegura que la imagen esté por encima de otros elementos */
+}
+
+#telegram-icon {
+    width: 110px; /* Tamaño inicial de la imagen */
+    height: 75px;
+}
+
+#telegram-chat:hover {
+    transform: scale(2) !important; /* Aumenta el tamaño al 200% al pasar el cursor sobre el contenedor */
+}
